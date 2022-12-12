@@ -36,8 +36,7 @@ education = st.selectbox("Highest Level of Education",
 
 
 ##Income
-income = st.selectbox("Income Level", 
-              
+income = st.selectbox("Income Level",               
               options = ["Less than $10,000",
                         "10 to under $20,000",
                         "20 to under $30,000",
