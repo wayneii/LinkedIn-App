@@ -96,7 +96,7 @@ X = ss[["income", "education", "parent", "married", "female", "age"]]
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify = y, test_size = 0.2, random_state = 777)
 lr = LogisticRegression(class_weight = "balanced")
 lr.fit(X_train, y_train) 
-observation = [income, educatioon, parent, married, gender, age]
+observation = [income, education, parent, married, gender, age]
 
 with st.form("key1"):
            submit = st.form_submit_button("Load Prediction")
