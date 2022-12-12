@@ -14,25 +14,34 @@ age = st.slider(label="Enter you age", min_value=1, max_value=98,value=7)
 
 
 #Gender
-gender = st.selectbox("What is your gender?", options = ["","Male", "Female"])
+options = ("","Male", "Female")
+gender = st.selectbox("What is your gender?", options = range(len(options)), format_func=lambda x: options[x] )
+st.write(gender)
 
 #Married
-married = st.selectbox("Are you married?", options = ["","Yes", "No"])
+options = ("","Yes", "No")
+married = st.selectbox("Are you married?", options = range(len(options)), format_func=lambda x: options[x] )
+st.write(married)
 
 #Parent
-parent = st.selectbox("Are you a parent?", options = ["","Yes", "No"])
+options = ("","Yes", "No")
+parent = st.selectbox("Are you a parent?", options = range(len(options)), format_func=lambda x: options[x] )
+st.write(parent)
 
 #Highest Level of Eduction
-education = st.selectbox("Highest Level of Education", 
-              options = ["",
-                        "Less than high school (Grades 1-8 or no formal schooling)",
-                        "High school graduate (Grade 12 with diploma or GED certificate)",
-                        "High school graduate (Grade 12 with diploma or GED certificate)",
-                        "Some college, no degree (includes some community college)",
-                        "Two-year associate degree from a college or university",
-                        "Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)",
-                        "Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)",
-                        "Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)"])
+options = ("",
+           "Less than high school (Grades 1-8 or no formal schooling)",
+           "High school graduate (Grade 12 with diploma or GED certificate)",
+           "High school graduate (Grade 12 with diploma or GED certificate)",
+           "Some college, no degree (includes some community college)",
+           "Two-year associate degree from a college or university",
+           "Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)",
+           "Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)",
+           "Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)")
+
+education = st.selectbox("Highest Level of Education", options = range(len(options)), format_func=lambda x: options[x])
+
+st.write(education)
 
 
 ##Income
@@ -48,6 +57,7 @@ options = ("","Less than $10,000",
 
 income = st.selectbox("Income Level", options = range(len(options))              
               , format_func=lambda x: options[x])
+
 
 st.write(income)
 
