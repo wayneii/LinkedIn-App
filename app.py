@@ -8,13 +8,13 @@ age = st.slider(label="Enter you age", min_value=1, max_value=98,value=7)
 
 
 #Gender
-gender = st.radio("What is your gender?", ('Male', 'Female'))
+gender = st.selectbox("What is your gender?", options = ["Male", "Female"])
 
 #Married
-married = st.radio("Are you married?", ('Yes', 'No'))
+married = st.selectbox("Are you married?", options = ["Yes", "No"])
 
 #Parent
-parent = st.radio("Are you a parent?", ('Yes', 'No'))
+parent = st.selectbox("Are you a parent?", options = ["Yes", "No"])
 
 #Highest Level of Eduction
 income = st.selectbox("Highest Level of Education", 
