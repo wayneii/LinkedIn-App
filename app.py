@@ -45,7 +45,7 @@ income = st.selectbox("Income Level",
                         "50 to under $75,000",
                         "75 to under $100,000",
                         "100 to under $150,000",
-                        "$150,000 or more"], format_func=lambda x: income[x])
+                        "$150,000 or more"], format_func=lambda x: options[x])
 
 print(options[income])
 
