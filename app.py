@@ -7,6 +7,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
 st.title("Let's see if my algorithm can predict whether or not you use LinkedIn")
+st.text("Made by Michael W. Rowe II")
 
 #Age
 age = st.slider(label="Enter you age", min_value=1, max_value=98,value=7)
