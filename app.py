@@ -76,7 +76,9 @@ income = st.selectbox("Income Level", options = range(len(options))
 st.write(income)
 
 #if income != "" && education != "" && parent != "" && married != "" && gender != "" && age != "":
-           
+def clean_sm(x):
+        x = np.where(x == 1, 1, 0)
+        return(x)           
 s = pd.read_csv("social_media_usage.csv")
 
 ss = pd.DataFrame({
