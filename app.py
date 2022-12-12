@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
-st.title("Let's see if I can predict if you used LinkedIn")
+st.title("Let's see if my algorithm can predict whether or not you use LinkedIn")
 
 #Age
 age = st.slider(label="Enter you age", min_value=1, max_value=98,value=7)
