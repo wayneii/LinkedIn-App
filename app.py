@@ -28,7 +28,8 @@ income = st.selectbox("Highest Level of Education",
                         "Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)"])
 ##Income
 income = st.selectbox("Income Level", 
-             options = ["Less than $10,000",
+             options = ["",
+                        "Less than $10,000",
                         "10 to under $20,000",
                         "20 to under $30,000",
                         "30 to under $40,000",
