@@ -14,18 +14,18 @@ age = st.slider(label="Enter you age", min_value=1, max_value=98,value=7)
 
 
 #Gender
-options = ("","Male", "Female")
-gender = st.selectbox("What is your gender?", options = range(len(options)), format_func=lambda x: options[x] )
+
+gender = st.selectbox("What is your gender?", options = ["","Male", "Female"] )
 st.write(gender)
 
 #Married
-options = ("","Yes", "No")
-married = st.selectbox("Are you married?", options = range(len(options)), format_func=lambda x: options[x] )
+
+married = st.selectbox("Are you married?", options = ["","Yes", "No"] )
 st.write(married)
 
 #Parent
-options = ("","Yes", "No")
-parent = st.selectbox("Are you a parent?", options = range(len(options)), format_func=lambda x: options[x] )
+
+parent = st.selectbox("Are you a parent?", options = ["","Yes", "No"] )
 st.write(parent)
 
 #Highest Level of Eduction
