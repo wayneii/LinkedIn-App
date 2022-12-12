@@ -8,17 +8,18 @@ age = st.slider(label="Enter you age", min_value=1, max_value=98,value=7)
 
 
 #Gender
-gender = st.selectbox("What is your gender?", options = ["Male", "Female"])
+gender = st.selectbox("What is your gender?", options = ["","Male", "Female"])
 
 #Married
-married = st.selectbox("Are you married?", options = ["Yes", "No"])
+married = st.selectbox("Are you married?", options = ["","Yes", "No"])
 
 #Parent
-parent = st.selectbox("Are you a parent?", options = ["Yes", "No"])
+parent = st.selectbox("Are you a parent?", options = ["","Yes", "No"])
 
 #Highest Level of Eduction
 income = st.selectbox("Highest Level of Education", 
-              options = ["Less than high school (Grades 1-8 or no formal schooling)",
+              options = ["",
+                        "Less than high school (Grades 1-8 or no formal schooling)",
                         "High school graduate (Grade 12 with diploma or GED certificate)",
                         "High school graduate (Grade 12 with diploma or GED certificate)",
                         "Some college, no degree (includes some community college)",
@@ -28,7 +29,8 @@ income = st.selectbox("Highest Level of Education",
                         "Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)"])
 ##Income
 income = st.selectbox("Income Level", 
-              options = ["Less than $10,000",
+              options = ["",
+                        "Less than $10,000",
                         "10 to under $20,000",
                         "20 to under $30,000",
                         "30 to under $40,000",
@@ -36,5 +38,4 @@ income = st.selectbox("Income Level",
                         "50 to under $75,000",
                         "75 to under $100,000",
                         "100 to under $150,000",
-                        "$150,000 or more"],
-                        index = 0)
+                        "$150,000 or more"])
