@@ -100,6 +100,6 @@ observation = [income, education, parent, married, gender, age]
 
 with st.form("key1"):
            submit = st.form_submit_button("Load Prediction")
-           pred_outcome = lr.predict([obversvation])
+           pred_outcome = lr.predict([observation])
            st.write(pred_outcome)
            
