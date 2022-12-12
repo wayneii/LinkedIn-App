@@ -75,6 +75,26 @@ income = st.selectbox("Income Level", options = range(len(options))
 
 st.write(income)
 
-#If income != "" & education != "" & parent != "" married != "" 
-  #s = pd.read_csv("social_media_usage.csv")
-  #s
+If income != "" & education != "" & parent != "" & married != "" & gender != "" & age != "":
+           
+           s = pd.read_csv("social_media_usage.csv")
+  
+           ss = pd.DataFrame({
+                      "sm_li":clean_sm(s["web1h"]),
+                      "income": np.where(s["income"] >9, np.nan, s["income"]),
+                      "education": np.where(s["educ2"]>8, np.nan, s["educ2"]),
+                      "parent": clean_sm(s["par"]),
+                      "married": clean_sm(s["marital"]),
+                      "female": clean_sm(s["gender"]),
+                      "age": np.where(s["age"]> 98, np.nan, s["age"])})
+
+           ss= ss.dropna()
+           y = ss["sm_li"]
+           X = ss[["income", "education", "parent", "married", "female", "age"]]
+           X_train, X_test, y_train, y_test = train_test_split(X, y, stratify = y, test_size = 0.2, random_state = 777)
+           lr = LogisticRegression(class_weight = "balanced")
+           lr.fit(X_train, y_train) 
+           observation = [income, educatioon, parent, married, gender, age]
+           pred_outcome = lr.predict([obversvation])
+           st.write(pred_outcome)
+           
