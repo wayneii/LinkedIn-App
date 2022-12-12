@@ -101,5 +101,9 @@ observation = [income, education, parent, married, gender, age]
 with st.form("key1"):
            submit = st.form_submit_button("Load Prediction")
            pred_outcome = lr.predict([observation])
+           if pred_outcome == "1":
+                      st.write("You are a LinkedIn User")
+           else:
+                      st.write("You are not a LinkedIn User")
            st.text(pred_outcome)
            
