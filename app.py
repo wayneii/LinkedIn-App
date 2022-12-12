@@ -75,7 +75,7 @@ income = st.selectbox("Income Level", options = range(len(options))
 
 st.write(income)
 
-If income != "" & education != "" & parent != "" & married != "" & gender != "" & age != "":
+if income != "" & education != "" & parent != "" & married != "" & gender != "" & age != "":
            
            s = pd.read_csv("social_media_usage.csv")
   
