@@ -45,7 +45,7 @@ income = st.selectbox("Income Level",
                         "50 to under $75,000",
                         "75 to under $100,000",
                         "100 to under $150,000",
-                        "$150,000 or more")
+                        "$150,000 or more"])
 
 #If income != "" & education != "" & parent != "" married != "" 
   #s = pd.read_csv("social_media_usage.csv")
