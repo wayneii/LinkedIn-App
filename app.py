@@ -21,7 +21,7 @@ if gender == "Female":
 else:
            gender = 0
            
-st.write(gender)
+#st.write(gender)
 
 #Married
 
@@ -31,7 +31,7 @@ if married == "Yes":
 else:
            married = 0
 
-st.write(married)
+#st.write(married)
 
 #Parent
 parent = st.selectbox("Are you a parent?", options = ["","Yes", "No"] )
@@ -40,7 +40,7 @@ if parent == "Yes":
 else:
            parent = 0
 
-st.write(parent)
+#st.write(parent)
 
 #Highest Level of Eduction
 options = ("",
@@ -55,7 +55,7 @@ options = ("",
 
 education = st.selectbox("Highest Level of Education", options = range(len(options)), format_func=lambda x: options[x])
 
-st.write(education)
+#st.write(education)
 
 
 ##Income
@@ -73,7 +73,7 @@ income = st.selectbox("Income Level", options = range(len(options))
               , format_func=lambda x: options[x])
 
 
-st.write(income)
+#st.write(income)
 
 #if income != "" && education != "" && parent != "" && married != "" && gender != "" && age != "":
 def clean_sm(x):
