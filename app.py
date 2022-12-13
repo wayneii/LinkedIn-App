@@ -109,6 +109,7 @@ with st.form("key1"):
                                  st.text(pred_outcome_probability[1])
                       else:
                                  st.write("You are not a LinkedIn User")
+                                 st.text(pred_outcome_probability[1])
                       #st.text("The probability you're a LinkedIn user is:", pred_outcome_probability)
                       st.text(pred_outcome)
 
