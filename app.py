@@ -103,7 +103,7 @@ with st.form("key1"):
            submit = st.form_submit_button("Load Prediction")
            if submit:
                       pred_outcome = lr.predict([observation])
-                      #pred_outcome_probability = lr.predict_proba([observation])
+                      pred_outcome_probability = lr.predict_proba([observation])
                       if pred_outcome == [1]:
                                  st.write("You are a LinkedIn User")
                       else:
