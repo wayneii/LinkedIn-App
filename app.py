@@ -104,12 +104,13 @@ with st.form("key1"):
            if submit:
                       pred_outcome = lr.predict([observation])
                       pred_outcome_probability = lr.predict_proba([observation])
+                      pred_outcome_percentage = (pred_outcome_probability[0][1])*100
                       if pred_outcome == [1]:
                                  st.write("You are a LinkedIn User")
-                                 st.text(pred_outcome_probability[0][1])
+                                 st.text("There is a", pred_outcome_percentage, "% probability that you are LinkedIn user.")
                       else:
                                  st.write("You are not a LinkedIn User")
-                                 st.text(pred_outcome_probability[0][1])
+                                 st.text("There is a", pred_outcome_percentage, "% probability that you are LinkedIn user.")
                       #st.text("The probability you're a LinkedIn user is:", pred_outcome_probability)
                       st.text(pred_outcome)
 
