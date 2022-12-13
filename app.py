@@ -106,6 +106,7 @@ with st.form("key1"):
                       pred_outcome_probability = lr.predict_proba([observation])
                       if pred_outcome == [1]:
                                  st.write("You are a LinkedIn User")
+                                 st.write(pred_outcome_probability[1])
                       else:
                                  st.write("You are not a LinkedIn User")
                       #st.text("The probability you're a LinkedIn user is:", pred_outcome_probability)
